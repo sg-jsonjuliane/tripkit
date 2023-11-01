@@ -15,10 +15,6 @@ android {
     namespace = "dev.jsonjuliane.tripkit"
     compileSdk = 34
 
-    buildFeatures {
-        buildConfig = true
-    }
-
     defaultConfig {
         applicationId = "dev.jsonjuliane.tripkit"
         minSdk = 21
@@ -56,6 +52,9 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
+        dataBinding = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
