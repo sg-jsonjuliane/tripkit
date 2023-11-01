@@ -1,17 +1,28 @@
+import java.io.FileInputStream
+import java.util.Properties
+
+
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
 }
 
+val properties = Properties()
+properties.load(FileInputStream(rootProject.file("local.properties")))
+
 android {
     namespace = "dev.jsonjuliane.tripkit"
-    compileSdk = 33
+    compileSdk = 34
+
+    buildFeatures {
+        buildConfig = true
+    }
 
     defaultConfig {
         applicationId = "dev.jsonjuliane.tripkit"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -28,6 +39,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "SKEDGO_KEY", properties["SKEDGO_KEY"] as String)
+        }
+        debug {
+            buildConfigField("String", "SKEDGO_KEY", properties["SKEDGO_KEY"] as String)
         }
     }
     compileOptions {

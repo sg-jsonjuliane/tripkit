@@ -14,7 +14,7 @@ class App : Application() {
 
         val configs = TripKitConfigs.builder().context(this)
             .debuggable(true)
-            .key { Key.ApiKey(getString(R.string.skedgo_api_key)) }
+            .key { Key.ApiKey(BuildConfig.SKEDGO_KEY) }
             .build()
 
         val httpClientModule = HttpClientModule(null, null, configs)
