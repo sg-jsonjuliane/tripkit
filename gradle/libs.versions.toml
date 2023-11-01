@@ -1,14 +1,24 @@
 [versions]
 agp = "8.1.2"
 org-jetbrains-kotlin-android = "1.8.10"
-core-ktx = "1.9.0"
+core-ktx = "1.12.0"
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.6.2"
 activity-compose = "1.8.0"
-compose-bom = "2023.03.00"
+compose-bom = "2023.10.01"
 tripkit-android-ui = "2.2.1.3"
+app-compat = "1.6.1"
+android-x = "1.6.1"
+play-services-maps = "18.2.0"
+constraintlayout = "2.1.4"
+material = "1.10.0"
+lifecycle-livedata-ktx = "2.6.2"
+lifecycle-viewmodel-ktx = "2.6.2"
+navigation-fragment-ktx = "2.7.4"
+navigation-ui-ktx = "2.7.4"
+kotlin-kapt-version = "1.9.10"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -25,11 +35,21 @@ ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
-tripKitAndroidUi = { group = "com.github.skedgo", name = "tripkit-android-ui", version.ref = "tripkit-android-ui"}
+tripKitAndroidUi = { group = "com.github.skedgo", name = "tripkit-android-ui", version.ref = "tripkit-android-ui" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "app-compat" }
+androidx = { group = "androidx.fragment", name = "fragment", version.ref = "android-x" }
+maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "play-services-maps" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle-livedata-ktx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation-fragment-ktx" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-ui-ktx" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin-kapt-version" }
 
 [bundles]
 

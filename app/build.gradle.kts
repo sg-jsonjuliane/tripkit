@@ -1,11 +1,11 @@
 import java.io.FileInputStream
 import java.util.Properties
 
-
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 val properties = Properties()
@@ -57,7 +57,7 @@ android {
         viewBinding = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packaging {
         resources {
@@ -68,6 +68,9 @@ android {
 
 dependencies {
 
+    implementation(libs.maps)
+    implementation(libs.androidx)
+    implementation(libs.appcompat)
     implementation(libs.tripKitAndroidUi)
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
@@ -77,6 +80,12 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+    implementation(libs.constraintlayout)
+    implementation(libs.material)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
