@@ -40,9 +40,11 @@ android {
                 "proguard-rules.pro"
             )
             buildConfigField("String", "SKEDGO_KEY", properties["SKEDGO_KEY"] as String)
+            resValue("string", "MAPS_KEY", properties["MAPS_KEY"] as String)
         }
         debug {
             buildConfigField("String", "SKEDGO_KEY", properties["SKEDGO_KEY"] as String)
+            resValue("string", "MAPS_KEY", properties["MAPS_KEY"] as String)
         }
     }
     compileOptions {
