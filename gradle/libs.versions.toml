@@ -8,7 +8,7 @@ espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.6.2"
 activity-compose = "1.8.0"
 compose-bom = "2023.03.00"
-tripKitAndroid = "2.2.0"
+tripkit-android-ui = "2.2.1.3"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -25,7 +25,7 @@ ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
-tripKit = { group = "com.github.skedgo", name = "tripkit-android", version.ref = "tripKitAndroid"}
+tripKitAndroidUi = { group = "com.github.skedgo", name = "tripkit-android-ui", version.ref = "tripkit-android-ui"}
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
