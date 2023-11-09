@@ -15,7 +15,7 @@
             android:value="@string/MAPS_KEY" />
 
         <activity
-            android:name=".MapActivity"
+            android:name=".HomeViewControllerActivity"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.Light">
             <intent-filter>

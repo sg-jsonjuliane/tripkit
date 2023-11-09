@@ -68,6 +68,7 @@ android {
 
 dependencies {
 
+    implementation("javax.inject:javax.inject:1")
     implementation(libs.maps)
     implementation(libs.androidx)
     implementation(libs.appcompat)
